@@ -13,8 +13,10 @@ function routing(hash) {
              break;     
     }
 
-
 }
 
 const nav = getElementByClass('navbar')
-addEventListener 'cli'
+nav.addEventListener('click', function evet() {
+     EventTarget
+    
+}) 
