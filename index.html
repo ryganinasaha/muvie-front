@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +13,28 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            width: 600px;
+            width: auto;
         }
 
         .list {
             display: grid;
-            grid-template-columns: 350px 80px 80px 80px;
-            border: 1px solid rgb(0, 0, 0);
+            grid-template-columns: auto;
+            grid-auto-flow: row;
+            width: 80px;
         }
 
-        .contents {
+        .item, .itemM {
+            display: grid;
+            grid-template-columns: 500px 100px 100px 100px;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            border-left: 1px solid rgb(0, 0, 0);
+            border-right: 1px solid rgb(0, 0, 0);
+        }
+
+        .itemM {
             font-size: 20px;
             font-weight: bold;
-            text-align: center;
+            border-top: 1px solid rgb(0, 0, 0);
         }
 
         .name {
@@ -33,76 +43,105 @@
         }
 
 
-
     </style>
     <body>
         
         <div class="list">
-            <div class="name">
-                <div class="contents"><p>name</p></div>
+            <div class="itemM">
+                <div><p>name</p></div>
+                <div><p>country</p></div>
+                <div><p>year</p></div>
+                <div><p>rating</p></div>
+            </div>
+
+            <div class="item">
                 <div><p>Зеленая миля</p></div>
-                <div><p>Список Шиндлера</p></div>
-                <div><p>Побег из Шоушенка</p></div>
-                <div><p>Властелин колец: Возвращение короля</p></div>
-                <div><p>Форрест Гамп</p></div>
-                <div><p>Властелин колец: Две крепости</p></div>
-                <div><p>Властелин колец: Братство кольца</p></div>
-                <div><p>1+1</p></div>
-                <div><p>Криминальное чтиво</p></div>
-                <div><p>Иван Васильевич меняет профессию</p></div>
-                <div><p>Отступники</p></div>
-                <div><p>Матрица</p></div>
-                <div><p>Человек паук</p></div>                
-            </div>
-
-            <div class="country">
-                <div class="contents"><p>country</p></div>
-                <div><p>USA</p></div>    
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>France</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USSR</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div> 
-                <div><p>USA</p></div>            
-            </div>
-
-            <div class="year">
-                <div class="contents"><p>year</p></div>
-                <div><p>1999</p></div>    
-                <div><p>1993</p></div> 
-                <div><p>1994</p></div> 
-                <div><p>2003</p></div> 
-                <div><p>1994</p></div> 
-                <div><p>2002</p></div> 
-                <div><p>2001</p></div> 
-                <div><p>2011</p></div> 
-                <div><p>1994</p></div> 
-                <div><p>1973</p></div> 
-                <div><p>2006</p></div> 
-                <div><p>1999</p></div> 
-                <div><p>2002</p></div>           
-            </div>
-
-            <div class="rating">
-                <div class="contents"><p>rating</p></div>
+                <div><p>USA</p></div>
+                <div><p>1999</p></div>
                 <div><p>9.1</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Список Шиндлера</p></div>
+                <div><p>USA</p></div>
+                <div><p>1993</p></div>
                 <div><p>9</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Побег из Шоушенка</p></div>
+                <div><p>USA</p></div>
+                <div><p>1994</p></div>
                 <div><p>9</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Властелин колец: Возвращение короля</p></div>
+                <div><p>USA</p></div>
+                <div><p>2003</p></div>
                 <div><p>9</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Форрест Гамп</p></div>
+                <div><p>USA</p></div>
+                <div><p>1994</p></div>
                 <div><p>8.9</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Властелин колец: Две крепости</p></div>
+                <div><p>USA</p></div>
+                <div><p>2002</p></div>
                 <div><p>8.8</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Властелин колец: Братство кольца</p></div>
+                <div><p>USA</p></div>
+                <div><p>2001</p></div>
                 <div><p>8.8</p></div>
-                <div><p>8.8</p></div>          
+            </div>
+
+            <div class="item">
+                <div><p>1+1</p></div>
+                <div><p>France</p></div>
+                <div><p>2011</p></div>
+                <div><p>8.8</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Криминальное чтиво</p></div>
+                <div><p>USA</p></div>
+                <div><p>1994</p></div>
                 <div><p>8.7</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Иван Васильевич меняет профессию</p></div>
+                <div><p>USSR</p></div>
+                <div><p>1973</p></div>
                 <div><p>8.7</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Отступники</p></div>
+                <div><p>USA</p></div>
+                <div><p>2006</p></div>
                 <div><p>9.5</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Матрица</p></div>
+                <div><p>USA</p></div>
+                <div><p>1999</p></div>
                 <div><p>8.5</p></div>
+            </div>
+
+            <div class="item">
+                <div><p>Человек паук</p></div>
+                <div><p>USA</p></div>
+                <div><p>2002</p></div>
                 <div><p>8.1</p></div>
             </div>
         </div>
