@@ -1,22 +1,16 @@
-
+const content = document.querySelector('.content')
+const nav = document.querySelector('.navbar')
 
 const hash = document.location.hash
+content.innerHTML = hash
 
-routing(hash)
-function routing(hash) {
-    switch (hash) {
-        case '#add':
-          alert('edd') 
-          break;
-        case '#movies':
-             alert('movies') 
-             break;     
-    }
+nav.addEventListener('click', function(event) {
+     const tagName = event.target.tagName
+     const href = event.target.getAttribute('href')
+     console.log(tagName)
 
-}
-
-const nav = getElementByClass('navbar')
-nav.addEventListener('click', function evet() {
-     EventTarget
+     if (tagName === 'A') {
+      content.innerHTML = href
+     }
     
 }) 
